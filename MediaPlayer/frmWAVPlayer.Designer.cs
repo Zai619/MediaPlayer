@@ -45,7 +45,8 @@
             // 
             this.grpPath.Controls.Add(this.btnBrowse);
             this.grpPath.Controls.Add(this.txtPath);
-            this.grpPath.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.grpPath.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.grpPath.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.grpPath.Location = new System.Drawing.Point(67, 46);
             this.grpPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grpPath.Name = "grpPath";
@@ -69,7 +70,8 @@
             this.grpButton.Controls.Add(this.btnStop);
             this.grpButton.Controls.Add(this.btnLoop);
             this.grpButton.Controls.Add(this.btnPlay);
-            this.grpButton.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.grpButton.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.grpButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.grpButton.Location = new System.Drawing.Point(67, 209);
             this.grpButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grpButton.Name = "grpButton";
@@ -81,7 +83,7 @@
             // 
             // btnEnd
             // 
-            this.btnEnd.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnEnd.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnEnd.Location = new System.Drawing.Point(427, 52);
             this.btnEnd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEnd.Name = "btnEnd";
@@ -93,11 +95,11 @@
             // 
             // btnStop
             // 
-            this.btnStop.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnStop.BackColor = System.Drawing.SystemColors.Desktop;
             this.btnStop.Location = new System.Drawing.Point(292, 52);
             this.btnStop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(102, 41);
+            this.btnStop.Size = new System.Drawing.Size(110, 41);
             this.btnStop.TabIndex = 2;
             this.btnStop.Text = "停止播放";
             this.btnStop.UseVisualStyleBackColor = false;
@@ -105,11 +107,11 @@
             // 
             // btnLoop
             // 
-            this.btnLoop.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnLoop.Location = new System.Drawing.Point(162, 52);
+            this.btnLoop.BackColor = System.Drawing.SystemColors.Desktop;
+            this.btnLoop.Location = new System.Drawing.Point(155, 52);
             this.btnLoop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLoop.Name = "btnLoop";
-            this.btnLoop.Size = new System.Drawing.Size(100, 41);
+            this.btnLoop.Size = new System.Drawing.Size(109, 41);
             this.btnLoop.TabIndex = 1;
             this.btnLoop.Text = "重複播放";
             this.btnLoop.UseVisualStyleBackColor = false;
@@ -117,7 +119,7 @@
             // 
             // btnPlay
             // 
-            this.btnPlay.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnPlay.BackColor = System.Drawing.SystemColors.Desktop;
             this.btnPlay.Location = new System.Drawing.Point(19, 52);
             this.btnPlay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPlay.Name = "btnPlay";
@@ -129,7 +131,7 @@
             // 
             // btnBrowse
             // 
-            this.btnBrowse.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnBrowse.BackColor = System.Drawing.SystemColors.Desktop;
             this.btnBrowse.Location = new System.Drawing.Point(461, 54);
             this.btnBrowse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBrowse.Name = "btnBrowse";
@@ -147,11 +149,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(719, 384);
             this.Controls.Add(this.grpButton);
             this.Controls.Add(this.grpPath);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmWAVPlayer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WAV音效檔播放器";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmWAVPlayer_FormClosing);
             this.grpPath.ResumeLayout(false);
