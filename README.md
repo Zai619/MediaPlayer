@@ -14,7 +14,12 @@
 
 ### 防呆機制:
 
-若是您的路徑錯誤或是未選取音效檔，按下播放一次、重複播放或停止播放，就會跳出下圖的提醒視窗
+1.若是您的路徑錯誤或是未選取音效檔，按下播放一次、重複播放或停止播放，就會跳出下圖的提醒視窗
 
 <img width="673" height="421" alt="image" src="https://github.com/user-attachments/assets/6e2e1381-7195-4369-a57d-4cb13536ac7f" />
+
+2.當您按下結束窗時，會向您再次確認是否要關閉，防止勿關
+
+<img width="672" height="420" alt="image" src="https://github.com/user-attachments/assets/f9b52cab-71a8-46dd-aea4-040a56a79519" />
+
 
