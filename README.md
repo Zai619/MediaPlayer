@@ -2,6 +2,11 @@
 ### 使用方式:
 按下瀏覽，選取想要聽的音效檔(wav)，即可播放
 
+
+### 使用介面
+
+<img width="667" height="417" alt="image" src="https://github.com/user-attachments/assets/e99fb10e-2209-4429-a9c9-ac8f03beb8be" />
+
 ### 播放模式:
 1.播放一次
 2.循環播放
@@ -12,11 +17,6 @@
 <img width="665" height="411" alt="image" src="https://github.com/user-attachments/assets/3c42d3ea-9d46-45c4-a5f5-1e325301dc0d" />
 <img width="662" height="410" alt="image" src="https://github.com/user-attachments/assets/ab47d646-8e5a-4dde-ba4c-21582e5c398f" />
 <img width="667" height="413" alt="image" src="https://github.com/user-attachments/assets/6d655a8f-c508-409d-a95b-b8f8e3387efc" />
-
-
-### 使用介面
-
-<img width="667" height="417" alt="image" src="https://github.com/user-attachments/assets/e99fb10e-2209-4429-a9c9-ac8f03beb8be" />
 
 ### 防呆機制:
 
