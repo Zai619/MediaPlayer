@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.grpPath = new System.Windows.Forms.GroupBox();
+            this.btnBrowse = new System.Windows.Forms.Button();
             this.txtPath = new System.Windows.Forms.TextBox();
             this.grpButton = new System.Windows.Forms.GroupBox();
             this.btnEnd = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.btnLoop = new System.Windows.Forms.Button();
             this.btnPlay = new System.Windows.Forms.Button();
-            this.btnBrowse = new System.Windows.Forms.Button();
             this.ofdWAVFile = new System.Windows.Forms.OpenFileDialog();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.grpPath.SuspendLayout();
             this.grpButton.SuspendLayout();
             this.SuspendLayout();
@@ -48,18 +49,30 @@
             this.grpPath.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.grpPath.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.grpPath.Location = new System.Drawing.Point(67, 46);
-            this.grpPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpPath.Margin = new System.Windows.Forms.Padding(4);
             this.grpPath.Name = "grpPath";
-            this.grpPath.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpPath.Padding = new System.Windows.Forms.Padding(4);
             this.grpPath.Size = new System.Drawing.Size(568, 132);
             this.grpPath.TabIndex = 0;
             this.grpPath.TabStop = false;
             this.grpPath.Text = "音效位置";
             // 
+            // btnBrowse
+            // 
+            this.btnBrowse.BackColor = System.Drawing.SystemColors.Desktop;
+            this.btnBrowse.Location = new System.Drawing.Point(461, 54);
+            this.btnBrowse.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(84, 41);
+            this.btnBrowse.TabIndex = 2;
+            this.btnBrowse.Text = "瀏覽";
+            this.btnBrowse.UseVisualStyleBackColor = false;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
             // txtPath
             // 
             this.txtPath.Location = new System.Drawing.Point(25, 59);
-            this.txtPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPath.Margin = new System.Windows.Forms.Padding(4);
             this.txtPath.Name = "txtPath";
             this.txtPath.Size = new System.Drawing.Size(409, 34);
             this.txtPath.TabIndex = 0;
@@ -73,9 +86,9 @@
             this.grpButton.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.grpButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.grpButton.Location = new System.Drawing.Point(67, 209);
-            this.grpButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpButton.Margin = new System.Windows.Forms.Padding(4);
             this.grpButton.Name = "grpButton";
-            this.grpButton.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpButton.Padding = new System.Windows.Forms.Padding(4);
             this.grpButton.Size = new System.Drawing.Size(568, 136);
             this.grpButton.TabIndex = 1;
             this.grpButton.TabStop = false;
@@ -85,7 +98,7 @@
             // 
             this.btnEnd.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnEnd.Location = new System.Drawing.Point(427, 52);
-            this.btnEnd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEnd.Margin = new System.Windows.Forms.Padding(4);
             this.btnEnd.Name = "btnEnd";
             this.btnEnd.Size = new System.Drawing.Size(118, 41);
             this.btnEnd.TabIndex = 3;
@@ -97,7 +110,7 @@
             // 
             this.btnStop.BackColor = System.Drawing.SystemColors.Desktop;
             this.btnStop.Location = new System.Drawing.Point(292, 52);
-            this.btnStop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStop.Margin = new System.Windows.Forms.Padding(4);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(110, 41);
             this.btnStop.TabIndex = 2;
@@ -109,7 +122,7 @@
             // 
             this.btnLoop.BackColor = System.Drawing.SystemColors.Desktop;
             this.btnLoop.Location = new System.Drawing.Point(155, 52);
-            this.btnLoop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLoop.Margin = new System.Windows.Forms.Padding(4);
             this.btnLoop.Name = "btnLoop";
             this.btnLoop.Size = new System.Drawing.Size(109, 41);
             this.btnLoop.TabIndex = 1;
@@ -121,7 +134,7 @@
             // 
             this.btnPlay.BackColor = System.Drawing.SystemColors.Desktop;
             this.btnPlay.Location = new System.Drawing.Point(19, 52);
-            this.btnPlay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPlay.Margin = new System.Windows.Forms.Padding(4);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(109, 41);
             this.btnPlay.TabIndex = 0;
@@ -129,21 +142,19 @@
             this.btnPlay.UseVisualStyleBackColor = false;
             this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
-            // btnBrowse
-            // 
-            this.btnBrowse.BackColor = System.Drawing.SystemColors.Desktop;
-            this.btnBrowse.Location = new System.Drawing.Point(461, 54);
-            this.btnBrowse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(84, 41);
-            this.btnBrowse.TabIndex = 2;
-            this.btnBrowse.Text = "瀏覽";
-            this.btnBrowse.UseVisualStyleBackColor = false;
-            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
-            // 
             // ofdWAVFile
             // 
             this.ofdWAVFile.DefaultExt = "wav";
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.lblStatus.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblStatus.Location = new System.Drawing.Point(246, 9);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(200, 34);
+            this.lblStatus.TabIndex = 2;
+            this.lblStatus.Text = "目前狀態:尚未開始";
             // 
             // frmWAVPlayer
             // 
@@ -151,9 +162,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(719, 384);
+            this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.grpButton);
             this.Controls.Add(this.grpPath);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmWAVPlayer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WAV音效檔播放器";
@@ -176,6 +188,7 @@
         private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.OpenFileDialog ofdWAVFile;
         private System.Windows.Forms.TextBox txtPath;
+        private System.Windows.Forms.Label lblStatus;
     }
 }
 

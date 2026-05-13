@@ -38,13 +38,15 @@ namespace MediaPlayer
             }
             try
             {
+                UpdateStatus("播放一次", Color.Green);
+
                 player = new SoundPlayer();
                 player.SoundLocation = txtPath.Text;
                 player.Load();
-                //player.Play();
-                player.PlaySync();
+                player.Play();
+                //player.PlaySync();
 
-                MessageBox.Show("音效播放完成!\n" ,"提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("音效播放完成!\n" ,"提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception ex){
@@ -58,6 +60,7 @@ namespace MediaPlayer
                 MessageBox.Show("找不到音效檔，請確認檔案路徑是否正確！", "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; // 提早結束，不執行後續的播放邏輯
             }
+            UpdateStatus("循環播放",Color.Pink);
             player = new SoundPlayer(txtPath.Text);
             player.PlayLooping();
         }
@@ -68,6 +71,8 @@ namespace MediaPlayer
                 MessageBox.Show("找不到音效檔，請確認檔案路徑是否正確！", "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; // 提早結束，不執行後續的播放邏輯
             }
+            UpdateStatus("暫停中", Color.Red);
+
             player.Stop();
         }
         private void btnEnd_Click(object sender, EventArgs e)
@@ -82,6 +87,11 @@ namespace MediaPlayer
             {
                 e.Cancel = true; // 取消關閉
             }
+        }
+        private void UpdateStatus(string status, Color color)
+        {
+            lblStatus.Text = $"目前狀態: {status}";
+            lblStatus.BackColor = color;
         }
     }
 }
