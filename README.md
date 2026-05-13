@@ -1,4 +1,4 @@
-# MediaPlayer
+# WAVPlayer
 ### 使用方式:
 按下瀏覽，選取想要聽的音效檔(wav)，即可播放
 
